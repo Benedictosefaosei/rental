@@ -17,6 +17,8 @@ from decouple import config
 import dj_database_url  # Also needed for DATABASE_URL
 
 
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -145,5 +147,6 @@ EMAIL_HOST_USER = config('EMAIL_HOST_USER') #'benedictosefaosei@gmail.com'
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD') #'pufy cnpp gexd qmng'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-CELERY_BROKER_URL = 'redis://localhost:6379/0'
+# CELERY_BROKER_URL = 'redis://localhost:6379/0'
+CELERY_BROKER_URL = config('CELERY_BROKER_URL')
 CELERY_TIMEZONE = 'UTC'
