@@ -32,7 +32,7 @@ SECRET_KEY = config('SECRET_KEY') #'django-insecure-0s@dj%jl38%!=c7@z3rc+87128lh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =  config('DEBUG', cast=bool) #True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
