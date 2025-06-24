@@ -27,10 +27,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY') #'django-insecure-0s@dj%jl38%!=c7@z3rc+87128lhutas-)nd6*j(-9n%&07ao&'
+SECRET_KEY = 'django-insecure-0s@dj%jl38%!=c7@z3rc+87128lhutas-)nd6*j(-9n%&07ao&' #config('SECRET_KEY') 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG =  config('DEBUG', cast=bool) #True
+DEBUG =  True #config('DEBUG', cast=bool) 
 
 ALLOWED_HOSTS = ['*']
 
@@ -140,12 +140,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = config('EMAIL_HOST') #'smtp.gmail.com'  
-EMAIL_PORT = config('EMAIL_PORT', cast=int) #587
-EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)# True
-EMAIL_HOST_USER = config('EMAIL_HOST_USER') #'benedictosefaosei@gmail.com'
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD') #'pufy cnpp gexd qmng'
+EMAIL_HOST = 'smtp.gmail.com'  #config('EMAIL_HOST') 
+EMAIL_PORT = 587 #config('EMAIL_PORT', cast=int) 
+EMAIL_USE_TLS =  True #config('EMAIL_USE_TLS', cast=bool)
+EMAIL_HOST_USER = 'benedictosefaosei@gmail.com' #config('EMAIL_HOST_USER') 
+EMAIL_HOST_PASSWORD = 'pufy cnpp gexd qmng' #config('EMAIL_HOST_PASSWORD') 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-CELERY_BROKER_URL = config('CELERY_BROKER_URL')
+CELERY_BROKER_URL = redis://default:kqfSU9FFLrEJLLr9hs1MHWF54Qbze4vM@redis-13892.c266.us-east-1-3.ec2.redns.redis-cloud.com:13892 #config('CELERY_BROKER_URL')
 CELERY_TIMEZONE = 'UTC'
