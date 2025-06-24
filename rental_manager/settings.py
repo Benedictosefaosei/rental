@@ -147,5 +147,5 @@ EMAIL_HOST_USER = 'benedictosefaosei@gmail.com' #config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = 'pufy cnpp gexd qmng' #config('EMAIL_HOST_PASSWORD') 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-CELERY_BROKER_URL = redis://default:kqfSU9FFLrEJLLr9hs1MHWF54Qbze4vM@redis-13892.c266.us-east-1-3.ec2.redns.redis-cloud.com:13892 #config('CELERY_BROKER_URL')
+CELERY_BROKER_URL = CELERY_BROKER_URL = "redis://default:kqfSU9FFLrEJLLr9hs1MHWF54Qbze4vM@redis-13892.c266.us-east-1-3.ec2.redns.redis-cloud.com:13892" #config('CELERY_BROKER_URL')
 CELERY_TIMEZONE = 'UTC'
